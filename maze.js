@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('mazeCanvas');
     const ctx = canvas.getContext('2d');
   
-    const mazeSize = 10; // 10x10のグリッド
+    const xmazeSize = 121; // 10x10のグリッド
+    const ymazeSize = 78; // 10x10のグリッド
     const cellSize = 40; // 各セルのサイズ
     let isDragging = false; // ドラッグ状態の管理
   
@@ -149,8 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     function drawMaze() {
-      for (let y = 0; y < mazeSize; y++) {
-        for (let x = 0; x < mazeSize; x++) {
+      for (let y = 0; y < ymazeSize; y++) {
+        for (let x = 0; x < xmazeSize; x++) {
           switch (maze[y][x]) {
             case 1:
               ctx.fillStyle = '#000'; // 壁
